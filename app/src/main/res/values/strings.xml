@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">PermissionApp</string>
+    <string name="tvLabel">Choose what to allow APP to access</string>
+
+    <string name="tvStorage">Storage</string>
+    <string name="tvStorageDesc">Access photos, media, and files on your device.</string>
+
+    <string name="tvLocation">Location</string>
+    <string name="tvLocationDesc">Access this device\'s loaction.</string>
+
+    <string name="tvCamera">Camera</string>
+    <string name="tvCameraDesc">Take pictures and record video.</string>
+
+    <string name="tvPhone">Phone</string>
+    <string name="tvPhoneDesc">Make and manage phone calls.</string>
+
+    <string name="tvContacts">Contacts</string>
+    <string name="tvContactsDesc">Access your contacts.</string>
+
+    <string name="btnContinue">Continue</string>
+    <string name="btnCancel">Cancel</string>
+
+</resources>
