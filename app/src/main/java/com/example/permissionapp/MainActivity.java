@@ -56,29 +56,28 @@ public class MainActivity extends AppCompatActivity {
         btnContinue.setOnClickListener(v -> {
             ArrayList<String> permissions = new ArrayList<>();
 
-            if(!(ContextCompat.checkSelfPermission(MainActivity.this,
-                    Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) && swStorage.isChecked()){
-
+            if(ContextCompat.checkSelfPermission(MainActivity.this,
+                    Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED && swStorage.isChecked()){
                     permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
             }
 
-            if(!(ContextCompat.checkSelfPermission(MainActivity.this,
-                    Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) && swLocation.isChecked()){
+            if(ContextCompat.checkSelfPermission(MainActivity.this,
+                    Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_DENIED && swLocation.isChecked()){
                 permissions.add(Manifest.permission.ACCESS_FINE_LOCATION);
             }
 
-            if(!(ContextCompat.checkSelfPermission(MainActivity.this,
-                    Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) && swCamera.isChecked()){
+            if(ContextCompat.checkSelfPermission(MainActivity.this,
+                    Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED && swCamera.isChecked()){
                 permissions.add(Manifest.permission.CAMERA);
             }
 
-            if(!(ContextCompat.checkSelfPermission(MainActivity.this,
-                    Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) && swPhone.isChecked()){
+            if(ContextCompat.checkSelfPermission(MainActivity.this,
+                    Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_DENIED && swPhone.isChecked()){
                 permissions.add(Manifest.permission.CALL_PHONE);
             }
 
-            if(!(ContextCompat.checkSelfPermission(MainActivity.this,
-                    Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED) && swContacts.isChecked()){
+            if(ContextCompat.checkSelfPermission(MainActivity.this,
+                    Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_DENIED && swContacts.isChecked()){
                 permissions.add(Manifest.permission.READ_CONTACTS);
             }
 
