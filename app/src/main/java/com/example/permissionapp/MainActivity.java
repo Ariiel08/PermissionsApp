@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         switchCheck();
-        System.out.println("oka");
     }
 
     @Override
@@ -53,20 +52,6 @@ public class MainActivity extends AppCompatActivity {
         switches.add(swCamera);
         switches.add(swPhone);
         switches.add(swContacts);
-
-
-//        for (Switch value: switches) {
-//
-//            value.setOnCheckedChangeListener((buttonView, isChecked) -> {
-//                if (ContextCompat.checkSelfPermission(MainActivity.this,
-//                        Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
-//                    swStorage.setChecked(true);
-//                }
-//                if(isChecked){
-//
-//                }
-//            });
-//        }
 
         btnContinue.setOnClickListener(v -> {
             ArrayList<String> permissions = new ArrayList<>();
@@ -128,15 +113,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }
-
-
-
-//        switch (requestCode) {
-//            case 200:
-//                boolean locationAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
-//                boolean cameraAccepted = grantResults[1] == PackageManager.PERMISSION_GRANTED;
-//                break;
-//        }
     }
 
     public void switchCheck(){
@@ -181,11 +157,6 @@ public class MainActivity extends AppCompatActivity {
             });
         }
     }
-
-//    public void jump(View view){
-//        Intent intent = new Intent(this, ActionActivity.class);
-//        startActivity(intent);
-//    }
 
     public void exit(View view){
         finish();
